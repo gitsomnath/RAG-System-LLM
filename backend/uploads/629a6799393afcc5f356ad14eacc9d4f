@@ -1,0 +1,44 @@
+LLM RAG Assistant Documentation
+
+System Overview:
+This system allows users to upload documents and ask questions based on the uploaded content.
+The system uses embeddings and vector search to find relevant content.
+
+Architecture:
+
+1. Document Upload
+2. Text Chunking
+3. Embedding Generation
+4. Vector Storage (Redis)
+5. Similarity Search
+6. Answer Generation
+
+Redis Vector Store:
+Redis is used to store embeddings along with text chunks.
+Each document is divided into smaller chunks before storing.
+
+Embeddings:
+Embeddings convert text into numerical vectors.
+These vectors help in finding semantic similarity between query and documents.
+
+RAG Flow:
+User uploads a document.
+System generates embeddings.
+User asks a question.
+System finds the most relevant chunk.
+System generates an answer based on context.
+
+Frontend:
+The frontend is built using React (Vite).
+It provides upload and chat interface.
+
+Backend:
+The backend is built using Node.js and Express.
+It handles embedding generation and search.
+
+Use Cases:
+
+* Internal knowledge assistant
+* Documentation chatbot
+* FAQ automation
+* Support automation
